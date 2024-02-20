@@ -47,5 +47,5 @@ Follow these steps to set up CollaboraPlan locally:
 
 1. Clone the repository:
    ```bash
-   git clone [https://github.com/your-username/CollaboraPlan.git](https://github.com/wellytonmrs/taskflow_hub.git)https://github.com/wellytonmrs/taskflow_hub.git
+   git clone https://github.com/wellytonmrs/taskflow_hub.git
    cd CollaboraPlan
