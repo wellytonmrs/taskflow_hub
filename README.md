@@ -49,3 +49,13 @@ Follow these steps to set up CollaboraPlan locally:
    ```bash
    git clone https://github.com/wellytonmrs/taskflow_hub.git
    cd taskflow_hub
+
+2. Start keycloak server locally using docker:
+
+    ```bash
+   docker run -p 8080:8080 -e KEYCLOAK_ADMIN=admin -e KEYCLOAK_ADMIN_PASSWORD=admin quay.io/keycloak/keycloak:22.0.5 start-dev
+
+3. 
+
+   
+
