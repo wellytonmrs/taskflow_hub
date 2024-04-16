@@ -53,9 +53,26 @@ Follow these steps to set up CollaboraPlan locally:
 2. Start keycloak server locally using docker:
 
     ```bash
-   docker run -p 8080:8080 -e KEYCLOAK_ADMIN=admin -e KEYCLOAK_ADMIN_PASSWORD=admin quay.io/keycloak/keycloak:22.0.5 start-dev
+   docker compose up
 
-3. 
+3. Configuring basic Keycloak settings
 
+   - Create Realm
+   - Create Client
+      - Type OIDC
+   - Create Realm Role
+      - Admin, User, Etc...
+   - Create User
+      - Set a password in User.Credentials
+   - Test token login at POST
+      ```bash
+      - curl --request POST \
+               --url http://localhost:8080/realms/{realm}/protocol/openid-connect/token \
+               --header 'Content-Type: application/x-www-form-urlencoded' \
+               --header 'User-Agent: insomnia' \
+               --data client_id={clientid} \
+               --data username={username} \
+               --data password={password} \
+               --data grant_type=password
    
 
